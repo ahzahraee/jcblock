@@ -52,11 +52,15 @@
 //     gcc -o jcblock jcblock.c truncate.c -lm
 // The program will then have all capabilities except the star (*) key
 // feature.
+#ifdef _DO_TONES
 #define DO_TONES
+#endif
 
 // Comment out the following define if you don't have an answering
 // machine attached to the same telephone line.
+#ifdef _ANS_MACHINE
 #define ANS_MACHINE
+#endif
 
 // Comment out the following define if you don't want truncation of
 // records older than nine months from files blacklist.dat and
@@ -68,7 +72,9 @@
 // not work with your fax modem, try: AT+FCLASS=2). By default this is
 // commented out so that the program will run with fax and non-fax
 // modems.
+#ifdef _DO_FAX_TONE
 #define DO_FAX_TONE
+#endif
 
 // Comment out the following define if you have a modem that does not
 // need a country code to operate with your country's phone system.
